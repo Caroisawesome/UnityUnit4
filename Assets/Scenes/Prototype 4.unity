@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -215,16 +215,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f75f887f287878dabac374920cf14e56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnObjects: []
-  spawnIndex: 0
-  timeDelay: 0
+  spawnObjects:
+  - {fileID: 3110565650786481286, guid: 55a5dc7cf04195b8dab15b2ea8aa8c65, type: 3}
+  - {fileID: 3110565650786481286, guid: 55a5dc7cf04195b8dab15b2ea8aa8c65, type: 3}
+  - {fileID: 3110565650786481286, guid: 55a5dc7cf04195b8dab15b2ea8aa8c65, type: 3}
+  startDelay: 5
   repeatRate: 15
   xLowerBound: -6
   xUpperBound: 6
-  yLowerBound: -6
-  yUpperBound: 6
-  zLowerBound: 0
-  zUpperBound: 0
+  yLowerBound: -0.5
+  yUpperBound: -0.5
+  zLowerBound: -6
+  zUpperBound: 6
 --- !u!4 &309355787
 Transform:
   m_ObjectHideFlags: 0
@@ -612,7 +614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466848949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -646,8 +648,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4952951a83710b47db06c679d2338748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  verticalInput: 0
   playerRigidBody: {fileID: 0}
+  scale: 0.5
 --- !u!1001 &3110565651080037282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -659,6 +661,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110565650786481286, guid: 55a5dc7cf04195b8dab15b2ea8aa8c65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110565650786481288, guid: 55a5dc7cf04195b8dab15b2ea8aa8c65,
+        type: 3}
+      propertyPath: scale
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3110565650786481290, guid: 55a5dc7cf04195b8dab15b2ea8aa8c65,
         type: 3}

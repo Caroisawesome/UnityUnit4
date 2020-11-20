@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{
-
-    public float verticalInput;
+{   
     public Rigidbody playerRigidBody;
     private int moveSpeed;
+
+    private float verticalInput;
     private GameObject focalPoint;
+
+    [Range(0.5f, 3.0f)]
+    public float scale;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,6 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         playerRigidBody.AddForce(focalPoint.transform.forward * moveSpeed* verticalInput);
 
-
+        transform.localScale = new Vector3(scale, scale, scale);
     }
 }
